@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Badass — Audio Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-category="badass">
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <span>🎧</span> Audio Library
+      </a>
+      <ul class="navbar__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aesthetic.html">Aesthetic</a></li>
+        <li><a href="chill.html">Chill</a></li>
+        <li><a href="badass.html">Badass</a></li>
+        <li><a href="hot.html">Hot</a></li>
+        <li><a href="phonk.html">Phonk</a></li>
+        <li><a href="sad.html">Sad</a></li>
+        <li><a href="soft.html">Soft</a></li>
+        <li><a href="creators.html">Creators</a></li>
+        <li><a href="copyright.html">Copyright</a></li>
+      </ul>
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" role="menu">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="aesthetic.html" role="menuitem">Aesthetic</a>
+      <a href="chill.html" role="menuitem">Chill</a>
+      <a href="badass.html" role="menuitem">Badass</a>
+      <a href="hot.html" role="menuitem">Hot</a>
+      <a href="phonk.html" role="menuitem">Phonk</a>
+      <a href="sad.html" role="menuitem">Sad</a>
+      <a href="soft.html" role="menuitem">Soft</a>
+      <a href="creators.html" role="menuitem">Creators</a>
+      <a href="copyright.html" role="menuitem">Copyright</a>
+    </div>
+  </nav>
+
+  <section class="category-hero">
+    <div class="category-hero__shapes" aria-hidden="true">
+      <div class="category-hero__shape category-hero__shape--1"></div>
+      <div class="category-hero__shape category-hero__shape--2"></div>
+    </div>
+    <h1 class="category-hero__title">Badass</h1>
+  </section>
+
+  <main class="song-section" id="songList" aria-label="Song list">
+    <!-- Populated by script.js -->
+  </main>
+
+  <footer class="footer">
+    <span>Created with ♥ by lolipop &amp; k0com | Always credit the original creators</span>
+    <a href="#" class="footer__tiktok" aria-label="TikTok">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.8 1.54V6.76a4.85 4.85 0 01-1.03-.07z"/>
+      </svg>
+    </a>
+  </footer>
+
+  <div class="audio-player" id="audioPlayer" role="region" aria-label="Audio player">
+    <button class="audio-player__btn" id="playerPlayBtn" aria-label="Play / Pause">▶</button>
+    <div class="audio-player__info">
+      <div class="audio-player__song" id="playerSongName">—</div>
+      <div class="audio-player__category" id="playerCategory">—</div>
+    </div>
+    <div class="audio-player__controls">
+      <span class="audio-player__time" id="playerCurrentTime">0:00</span>
+      <input type="range" class="audio-player__progress" id="playerProgress"
+             min="0" max="100" step="0.1" value="0" aria-label="Seek" />
+      <span class="audio-player__time" id="playerTotalTime">0:00</span>
+    </div>
+    <div class="audio-player__volume">
+      <span class="audio-player__volume-icon" aria-hidden="true">🔊</span>
+      <input type="range" class="audio-player__vol-range" id="playerVolume"
+             min="0" max="1" step="0.01" value="1" aria-label="Volume" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

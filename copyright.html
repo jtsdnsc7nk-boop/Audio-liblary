@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copyright & Credits — Audio Library</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .copy-section {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 1.5rem 7rem;
+    }
+
+    .copy-block {
+      background: #141414;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 2rem 2.25rem;
+      margin-bottom: 1.25rem;
+      transition: border-color 0.25s ease;
+    }
+
+    .copy-block:hover {
+      border-color: rgba(255,255,255,0.1);
+    }
+
+    .copy-block__icon {
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .copy-block__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #f1f1f1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .copy-block--accent {
+      border-left: 3px solid #e63946;
+    }
+
+    .copy-block--green {
+      border-left: 3px solid #1db954;
+    }
+
+    .copy-block--blue {
+      border-left: 3px solid #7c6ff7;
+    }
+
+    .copy-block--orange {
+      border-left: 3px solid #f59e0b;
+    }
+
+    .copy-block p {
+      font-size: 0.92rem;
+      color: #777;
+      line-height: 1.8;
+      margin-bottom: 0.6rem;
+    }
+
+    .copy-block p:last-child { margin-bottom: 0; }
+
+    .copy-block p strong {
+      color: #f1f1f1;
+      font-weight: 600;
+    }
+
+    .copy-block ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .copy-block ul li {
+      font-size: 0.9rem;
+      color: #777;
+      line-height: 1.6;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .copy-block ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #333;
+    }
+
+    .copy-block ul li strong { color: #ccc; }
+
+    .copy-example {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      color: #aaa;
+      font-family: monospace;
+      margin-top: 0.75rem;
+      letter-spacing: 0.01em;
+    }
+
+    .copy-example span { color: #e63946; }
+
+    .copy-tiktok-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #f1f1f1;
+      font-weight: 600;
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      padding-bottom: 1px;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .copy-tiktok-link:hover {
+      color: #e63946;
+      border-color: #e63946;
+    }
+
+    .copy-intro {
+      text-align: center;
+      padding: 2rem 0 2.5rem;
+      font-size: 0.92rem;
+      color: #555;
+      line-height: 1.8;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .copy-intro strong { color: #888; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <span>🎧</span> Audio Library
+      </a>
+      <ul class="navbar__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aesthetic.html">Aesthetic</a></li>
+        <li><a href="chill.html">Chill</a></li>
+        <li><a href="badass.html">Badass</a></li>
+        <li><a href="hot.html">Hot</a></li>
+        <li><a href="phonk.html">Phonk</a></li>
+        <li><a href="sad.html">Sad</a></li>
+        <li><a href="soft.html">Soft</a></li>
+        <li><a href="creators.html">Creators</a></li>
+        <li><a href="copyright.html" class="active">Copyright</a></li>
+      </ul>
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" role="menu">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="aesthetic.html" role="menuitem">Aesthetic</a>
+      <a href="chill.html" role="menuitem">Chill</a>
+      <a href="badass.html" role="menuitem">Badass</a>
+      <a href="hot.html" role="menuitem">Hot</a>
+      <a href="phonk.html" role="menuitem">Phonk</a>
+      <a href="sad.html" role="menuitem">Sad</a>
+      <a href="soft.html" role="menuitem">Soft</a>
+      <a href="creators.html" role="menuitem">Creators</a>
+      <a href="copyright.html" role="menuitem" class="active">Copyright</a>
+    </div>
+  </nav>
+
+  <section class="category-hero">
+    <div class="category-hero__shapes" aria-hidden="true">
+      <div class="category-hero__shape category-hero__shape--1"></div>
+      <div class="category-hero__shape category-hero__shape--2"></div>
+    </div>
+    <h1 class="category-hero__title">Copyright & Credits</h1>
+  </section>
+
+  <main class="copy-section">
+
+    <p class="copy-intro">
+      This site exists to support the edit community — a place to discover, share, and enjoy
+      creative audio edits. <strong>We believe in transparency</strong> about what these files
+      are and who they belong to.
+    </p>
+
+    <!-- What these files are -->
+    <div class="copy-block copy-block--accent">
+      <span class="copy-block__icon">🎵</span>
+      <div class="copy-block__title">What these audio files are</div>
+      <p>Every audio file on this site is a <strong>fan-made creative edit</strong> — slowed, reverbed, beatmarked, or otherwise transformed versions of existing songs, made for the edit and content creation community.</p>
+      <ul>
+        <li><strong>We do not claim ownership</strong> of any original music. All original songs belong to their respective artists, producers, and record labels.</li>
+        <li>These edits are <strong>non-commercial</strong> — no money is made from this site or from distributing these files.</li>
+        <li>They are made purely for <strong>creative and artistic purposes</strong>, in the tradition of fan remix culture.</li>
+        <li>Each edit is credited to its creator (shown on the audio card).</li>
+      </ul>
+    </div>
+
+    <!-- How to credit -->
+    <div class="copy-block copy-block--green">
+      <span class="copy-block__icon">✅</span>
+      <div class="copy-block__title">How to credit when you use these</div>
+      <p>If you use one of these edits in a video, post, or project — please credit everyone involved. It takes 5 seconds and means a lot to the creators.</p>
+      <ul>
+        <li>Credit the <strong>original artist</strong> whose song was used</li>
+        <li>Credit the <strong>edit creator</strong> (Issyn, Nixan, Lory, etc.) who made the edit</li>
+        <li>Linking back to this library is always appreciated</li>
+      </ul>
+      <div class="copy-example">
+        audio: <span>[Song Name]</span> - <span>[Original Artist]</span> (edit by <span>[Creator]</span>)
+      </div>
+    </div>
+
+    <!-- Original rights -->
+    <div class="copy-block copy-block--blue">
+      <span class="copy-block__icon">⚖️</span>
+      <div class="copy-block__title">Original song rights</div>
+      <p>The original songs featured in these edits are the intellectual property of their respective <strong>artists, songwriters, and record labels</strong>. Audio Library has no affiliation with any of them.</p>
+      <p>The <strong>Spotify links</strong> on each song card point to the official original track — we encourage you to support the artists by streaming their music on official platforms.</p>
+      <p>Edits are transformative works created under the spirit of fan creativity. However, we fully acknowledge that rights holders retain all rights to their original material.</p>
+    </div>
+
+    <!-- DMCA / Takedown -->
+    <div class="copy-block copy-block--orange">
+      <span class="copy-block__icon">📧</span>
+      <div class="copy-block__title">DMCA & takedown requests</div>
+      <p>We <strong>respect intellectual property rights</strong>. If you are a rights holder and believe any content on this site infringes on your rights, we will remove it promptly.</p>
+      <ul>
+        <li>Email us at
+          <a class="copy-tiktok-link" href="mailto:Lolipopontiktok@gmail.com">
+            Lolipopontiktok@gmail.com
+          </a>
+        </li>
+        <li>Or reach out via <strong>TikTok DM</strong> to
+          <a class="copy-tiktok-link" href="https://www.tiktok.com/@altpop.aep" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.8 1.54V6.76a4.85 4.85 0 01-1.03-.07z"/>
+            </svg>
+            @altpop.aep
+          </a>
+        </li>
+        <li>Include the <strong>song name</strong> and the reason for your request</li>
+        <li>We will <strong>remove the content within 48 hours</strong> of a valid request — no questions asked</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <span>Created with ♥ by lolipop &amp; k0com | Always credit the original creators</span>
+    <a href="#" class="footer__tiktok" aria-label="TikTok">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.22 8.22 0 004.8 1.54V6.76a4.85 4.85 0 01-1.03-.07z"/>
+      </svg>
+    </a>
+  </footer>
+
+  <div class="audio-player" id="audioPlayer" role="region" aria-label="Audio player">
+    <button class="audio-player__btn" id="playerPlayBtn" aria-label="Play / Pause">▶</button>
+    <div class="audio-player__info">
+      <div class="audio-player__song" id="playerSongName">—</div>
+      <div class="audio-player__category" id="playerCategory">—</div>
+    </div>
+    <div class="audio-player__controls">
+      <span class="audio-player__time" id="playerCurrentTime">0:00</span>
+      <input type="range" class="audio-player__progress" id="playerProgress"
+             min="0" max="100" step="0.1" value="0" aria-label="Seek" />
+      <span class="audio-player__time" id="playerTotalTime">0:00</span>
+    </div>
+    <div class="audio-player__volume">
+      <span class="audio-player__volume-icon" aria-hidden="true">🔊</span>
+      <input type="range" class="audio-player__vol-range" id="playerVolume"
+             min="0" max="1" step="0.01" value="1" aria-label="Volume" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
