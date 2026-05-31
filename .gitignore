@@ -2,3 +2,9 @@ docs/
 __pycache__/
 *.pyc
 .claude/
+
+# Audio files — upload manually via GitHub UI
+*.wav
+*.mp3
+*.ogg
+*.flac
