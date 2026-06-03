@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* ─── Tokens ──────────────────────────────────────────────────────────────────── */
 :root {
   --bg: #0a0a0a;
   --navbar-bg: #0d0d0d;
@@ -15,7 +14,6 @@
   --ease: 0.25s ease;
 }
 
-/* ─── Keyframes ───────────────────────────────────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0);    }
@@ -35,7 +33,6 @@
   to { transform: rotate(360deg); }
 }
 
-/* ─── Reset ───────────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
@@ -61,7 +58,6 @@ code {
   font-size: 0.88em;
 }
 
-/* ─── Navbar ──────────────────────────────────────────────────────────────────── */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -168,7 +164,6 @@ code {
 .navbar__mobile a:hover { color: var(--text-primary); background: rgba(255,255,255,0.03); }
 .navbar__mobile a.active { color: var(--accent); }
 
-/* ─── Home Hero ───────────────────────────────────────────────────────────────── */
 .hero {
   position: relative;
   min-height: 58vh;
@@ -181,7 +176,6 @@ code {
   overflow: hidden;
 }
 
-/* grain */
 .hero::before {
   content: '';
   position: absolute;
@@ -193,7 +187,6 @@ code {
   z-index: 0;
 }
 
-/* red glow blob */
 .hero::after {
   content: '';
   position: absolute;
@@ -249,7 +242,6 @@ code {
   animation: fadeUp 0.7s 0.2s ease both;
 }
 
-/* ─── Category Grid ───────────────────────────────────────────────────────────── */
 .section {
   max-width: 1240px;
   margin: 0 auto;
@@ -295,7 +287,6 @@ code {
 .card:nth-child(6) { animation-delay: 0.30s; }
 .card:nth-child(7) { animation-delay: 0.35s; }
 
-/* light sweep on hover */
 .card::after {
   content: '';
   position: absolute;
@@ -326,7 +317,6 @@ code {
   text-transform: uppercase;
 }
 
-/* category gradients */
 .card--aesthetic { background: linear-gradient(140deg, #2a1550 0%, #1a3060 60%, #0f1a40 100%); }
 .card--chill     { background: linear-gradient(140deg, #0a2e30 0%, #0e4028 60%, #061e20 100%); }
 .card--badass    { background: linear-gradient(140deg, #4a1a0a 0%, #5a1414 60%, #300a0a 100%); }
@@ -335,7 +325,6 @@ code {
 .card--sad       { background: linear-gradient(140deg, #0f1a30 0%, #1c1c2e 60%, #0a0a14 100%); }
 .card--soft      { background: linear-gradient(140deg, #2a1048 0%, #48103a 60%, #1a0830 100%); }
 
-/* ─── Category Hero ───────────────────────────────────────────────────────────── */
 .category-hero {
   position: relative;
   min-height: 230px;
@@ -372,7 +361,6 @@ code {
   opacity: 0.5;
 }
 
-/* bottom glow */
 .category-hero::after {
   content: '';
   position: absolute;
@@ -402,7 +390,6 @@ code {
   animation: fadeUp 0.5s ease both;
 }
 
-/* ─── Song Section ────────────────────────────────────────────────────────────── */
 .song-section {
   max-width: 900px;
   margin: 0 auto;
@@ -513,7 +500,6 @@ code {
   box-shadow: 0 0 12px rgba(230,57,70,0.2);
 }
 
-/* ─── Spotify Embed Rows ─────────────────────────────────────────────────────── */
 .spotify-row {
   padding: 1rem 0.5rem 0.25rem;
   border-bottom: 1px solid rgba(255,255,255,0.04);
@@ -552,7 +538,6 @@ code {
   display: block;
 }
 
-/* ─── Skeleton Loaders ────────────────────────────────────────────────────────── */
 .skeleton {
   background: linear-gradient(90deg, #161616 25%, #1e1e1e 50%, #161616 75%);
   background-size: 200% 100%;
@@ -575,7 +560,6 @@ code {
 .skeleton-duration { width: 36px; height: 13px; }
 .skeleton-download { width: 86px; height: 27px; border-radius: var(--radius-pill); }
 
-/* ─── Empty State ─────────────────────────────────────────────────────────────── */
 .song-empty {
   text-align: center;
   padding: 4rem 2rem;
@@ -584,7 +568,6 @@ code {
   line-height: 2;
 }
 
-/* ─── Global Audio Player ─────────────────────────────────────────────────────── */
 .audio-player {
   position: fixed;
   bottom: 0; left: 0; right: 0;
@@ -672,7 +655,6 @@ code {
 
 .audio-player__volume-icon { font-size: 0.9rem; color: #555; }
 
-/* ─── Range Inputs ────────────────────────────────────────────────────────────── */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -702,7 +684,6 @@ input[type="range"]::-moz-range-thumb {
 .audio-player__progress { flex: 1; min-width: 60px; }
 .audio-player__vol-range { width: 80px; }
 
-/* ─── Footer ──────────────────────────────────────────────────────────────────── */
 .footer {
   background: rgba(10,10,10,0.95);
   border-top: 1px solid rgba(255,255,255,0.04);
@@ -719,7 +700,6 @@ input[type="range"]::-moz-range-thumb {
 .footer__tiktok { color: #444; transition: color var(--ease); }
 .footer__tiktok:hover { color: var(--text-secondary); }
 
-/* ─── Creators Page ───────────────────────────────────────────────────────────── */
 .creators-section {
   max-width: 1000px;
   margin: 0 auto;
@@ -732,7 +712,6 @@ input[type="range"]::-moz-range-thumb {
   gap: 1.5rem;
 }
 
-/* base card */
 .creator-card {
   background: var(--panel-bg);
   border-radius: 16px;
@@ -753,7 +732,6 @@ input[type="range"]::-moz-range-thumb {
 
 .creator-card:hover { transform: translateY(-8px); }
 
-/* gradient top strip — hardcoded per card */
 .creator-card::before {
   content: '';
   display: block;
@@ -763,23 +741,18 @@ input[type="range"]::-moz-range-thumb {
   flex-shrink: 0;
 }
 
-/* owner = red */
 .creator-card--owner::before  { background: linear-gradient(90deg, #e63946 0%, #ff6b81 100%); }
 .creator-card--owner:hover    { border-color: rgba(230,57,70,0.4); box-shadow: 0 24px 70px rgba(0,0,0,0.55), 0 0 40px rgba(230,57,70,0.12); }
 
-/* designer = purple */
 .creator-card--designer::before { background: linear-gradient(90deg, #7c6ff7 0%, #a78bfa 100%); }
 .creator-card--designer:hover   { border-color: rgba(124,111,247,0.4); box-shadow: 0 24px 70px rgba(0,0,0,0.55), 0 0 40px rgba(124,111,247,0.12); }
 
-/* music = teal */
 .creator-card--music::before  { background: linear-gradient(90deg, #2ec4b6 0%, #06b6d4 100%); }
 .creator-card--music:hover    { border-color: rgba(46,196,182,0.4); box-shadow: 0 24px 70px rgba(0,0,0,0.55), 0 0 40px rgba(46,196,182,0.12); }
 
-/* music2 = orange (nixan) */
 .creator-card--music2::before { background: linear-gradient(90deg, #f59e0b 0%, #f97316 100%); }
 .creator-card--music2:hover   { border-color: rgba(245,158,11,0.4); box-shadow: 0 24px 70px rgba(0,0,0,0.55), 0 0 40px rgba(245,158,11,0.12); }
 
-/* avatar circle */
 .creator-avatar {
   width: 88px;
   height: 88px;
@@ -799,7 +772,6 @@ input[type="range"]::-moz-range-thumb {
 .creator-card--music   .creator-avatar { background: linear-gradient(135deg, #2ec4b6, #06b6d4); box-shadow: 0 8px 32px rgba(46,196,182,0.45); }
 .creator-card--music2  .creator-avatar { background: linear-gradient(135deg, #f59e0b, #f97316); box-shadow: 0 8px 32px rgba(245,158,11,0.45); }
 
-/* avatar image */
 .creator-avatar img {
   width: 100%;
   height: 100%;
@@ -813,7 +785,6 @@ input[type="range"]::-moz-range-thumb {
 .creator-avatar.has-pfp img          { display: block; }
 .creator-avatar.has-pfp .creator-avatar__letter { display: none; }
 
-/* tiktok link */
 .creator-socials {
   display: flex;
   flex-wrap: wrap;
@@ -860,7 +831,6 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 0 18px rgba(88,101,242,0.2);
 }
 
-/* name */
 .creator-name {
   font-size: 1.4rem;
   font-weight: 700;
@@ -869,7 +839,6 @@ input[type="range"]::-moz-range-thumb {
   letter-spacing: -0.01em;
 }
 
-/* role badge */
 .creator-role {
   display: inline-block;
   font-size: 0.66rem;
@@ -887,7 +856,6 @@ input[type="range"]::-moz-range-thumb {
 .creator-card--music   .creator-role { background: linear-gradient(135deg, #2ec4b6, #06b6d4); }
 .creator-card--music2  .creator-role { background: linear-gradient(135deg, #f59e0b, #f97316); }
 
-/* bio */
 .creator-bio {
   font-size: 0.87rem;
   color: var(--text-secondary);
@@ -895,7 +863,6 @@ input[type="range"]::-moz-range-thumb {
   max-width: 250px;
 }
 
-/* ─── Search ──────────────────────────────────────────────────────────────────── */
 .navbar__search {
   width: 34px;
   height: 34px;
@@ -1086,7 +1053,6 @@ input[type="range"]::-moz-range-thumb {
 
 .search-empty strong { color: var(--text-secondary); }
 
-/* ─── Responsive ──────────────────────────────────────────────────────────────── */
 @media (min-width: 768px) {
   .category-grid  { grid-template-columns: repeat(2, 1fr); }
   .creators-grid  { grid-template-columns: repeat(2, 1fr); }
