@@ -1,7 +1,5 @@
 'use strict';
 
-/* ─── Utilities ─────────────────────────────────────────────────────────────── */
-
 function formatTime(sec) {
   if (!sec || isNaN(sec) || !isFinite(sec)) return '0:00';
   const m = Math.floor(sec / 60);
@@ -18,8 +16,6 @@ function formatName(filename) {
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
-
-/* ─── Audio Player ───────────────────────────────────────────────────────────── */
 
 const AudioPlayer = (() => {
   const audio = new Audio();
@@ -118,8 +114,6 @@ const AudioPlayer = (() => {
   return { play, pause, toggle, seek, setVolume, initControls };
 })();
 
-/* ─── Nav ────────────────────────────────────────────────────────────────────── */
-
 function initNav() {
   const category = document.body.dataset.category || null;
 
@@ -146,8 +140,6 @@ function initNav() {
   }
 }
 
-/* ─── Song Rendering ─────────────────────────────────────────────────────────── */
-
 function renderSkeletons(container) {
   container.innerHTML = Array.from({ length: 3 }, () => `
     <div class="skeleton-row">
@@ -173,7 +165,7 @@ function renderSongs(songs, category, container, spotifyMap) {
     const name     = formatName(filename);
     const trackId  = spotifyMap && spotifyMap[filename];
 
-    // Audio row — Spotify button instead of download
+    
     const src = `${category}/${encodeURIComponent(filename)}`;
     const spotifyHref = trackId
       ? `https://open.spotify.com/track/${trackId}`
@@ -195,7 +187,7 @@ function renderSongs(songs, category, container, spotifyMap) {
 
   container.innerHTML = html;
 
-  // Wire up audio-row play buttons and duration loading
+  
   container.querySelectorAll('.song-row').forEach(row => {
     const { src, name, cat } = row.dataset;
 
@@ -242,8 +234,6 @@ async function loadSongs(category) {
   }
 }
 
-/* ─── Search ─────────────────────────────────────────────────────────────────── */
-
 const Search = (() => {
   const CATEGORIES = ['aesthetic', 'chill', 'badass', 'hot', 'phonk', 'sad', 'soft'];
   let cache = null;
@@ -252,7 +242,7 @@ const Search = (() => {
   const SVG_SEARCH = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`;
 
   function _inject() {
-    /* search button in navbar */
+    
     const hamburger = document.querySelector('.navbar__hamburger');
     if (hamburger) {
       const btn = document.createElement('button');
@@ -263,7 +253,7 @@ const Search = (() => {
       hamburger.parentNode.insertBefore(btn, hamburger);
     }
 
-    /* overlay */
+    
     const el = document.createElement('div');
     el.className = 'search-overlay';
     el.setAttribute('role', 'dialog');
@@ -361,8 +351,6 @@ const Search = (() => {
   return { init, open, close };
 })();
 
-/* ─── Profile Pictures ───────────────────────────────────────────────────────── */
-
 function loadProfilePics() {
   const EXTS  = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
   document.querySelectorAll('.creator-avatar[data-pfp]').forEach(wrapper => {
@@ -371,7 +359,7 @@ function loadProfilePics() {
     const img    = wrapper.querySelector('img');
     if (!img) return;
 
-    // Try every combination of common names × extensions
+    
     const names = ['avatar', person, 'pfp', 'profile'];
     const candidates = names.flatMap(n => EXTS.map(e => `${folder}/${n}.${e}`));
 
@@ -385,8 +373,6 @@ function loadProfilePics() {
     tryNext();
   });
 }
-
-/* ─── Bootstrap ──────────────────────────────────────────────────────────────── */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
