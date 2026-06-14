@@ -732,6 +732,7 @@ input[type="range"]::-moz-range-thumb {
 .creator-card:nth-child(3) { animation-delay: 0.3s; }
 .creator-card:nth-child(4) { animation-delay: 0.4s; }
 .creator-card:nth-child(5) { animation-delay: 0.5s; }
+.creator-card:nth-child(6) { animation-delay: 0.6s; }
 
 .creator-card:hover { transform: translateY(-6px); }
 
@@ -745,20 +746,29 @@ input[type="range"]::-moz-range-thumb {
   flex-shrink: 0;
 }
 
+/* owner */
 .creator-card--owner::before  { background: linear-gradient(90deg, #e63946, #ff6b81); }
 .creator-card--owner:hover    { border-color: rgba(230,57,70,0.35); box-shadow: 0 24px 70px rgba(0,0,0,0.6), 0 0 50px rgba(230,57,70,0.1); }
 
+/* designer */
 .creator-card--designer::before { background: linear-gradient(90deg, #7c6ff7, #a78bfa); }
 .creator-card--designer:hover   { border-color: rgba(124,111,247,0.35); box-shadow: 0 24px 70px rgba(0,0,0,0.6), 0 0 50px rgba(124,111,247,0.1); }
 
+/* music (teal) */
 .creator-card--music::before  { background: linear-gradient(90deg, #2ec4b6, #06b6d4); }
 .creator-card--music:hover    { border-color: rgba(46,196,182,0.35); box-shadow: 0 24px 70px rgba(0,0,0,0.6), 0 0 50px rgba(46,196,182,0.1); }
 
+/* music2 (orange/amber) */
 .creator-card--music2::before { background: linear-gradient(90deg, #f59e0b, #f97316); }
 .creator-card--music2:hover   { border-color: rgba(245,158,11,0.35); box-shadow: 0 24px 70px rgba(0,0,0,0.6), 0 0 50px rgba(245,158,11,0.1); }
 
+/* music3 (pink) */
 .creator-card--music3::before { background: linear-gradient(90deg, #ec4899, #f472b6); }
 .creator-card--music3:hover   { border-color: rgba(236,72,153,0.35); box-shadow: 0 24px 70px rgba(0,0,0,0.6), 0 0 50px rgba(236,72,153,0.1); }
+
+/* music4 (azure/cyan) */
+.creator-card--music4::before { background: linear-gradient(90deg, #00c9e4, #0ef6cc); }
+.creator-card--music4:hover   { border-color: rgba(0,201,228,0.35); box-shadow: 0 24px 70px rgba(0,0,0,0.6), 0 0 50px rgba(0,201,228,0.15); }
 
 .creator-avatar {
   width: 120px;
@@ -780,6 +790,7 @@ input[type="range"]::-moz-range-thumb {
 .creator-card--music    .creator-avatar { background: linear-gradient(135deg, #2ec4b6, #06b6d4); box-shadow: 0 0 0 4px rgba(46,196,182,0.18), 0 8px 40px rgba(46,196,182,0.45); }
 .creator-card--music2   .creator-avatar { background: linear-gradient(135deg, #f59e0b, #f97316); box-shadow: 0 0 0 4px rgba(245,158,11,0.18), 0 8px 40px rgba(245,158,11,0.45); }
 .creator-card--music3   .creator-avatar { background: linear-gradient(135deg, #ec4899, #f472b6); box-shadow: 0 0 0 4px rgba(236,72,153,0.18), 0 8px 40px rgba(236,72,153,0.45); }
+.creator-card--music4   .creator-avatar { background: linear-gradient(135deg, #00c9e4, #0ef6cc); box-shadow: 0 0 0 4px rgba(0,201,228,0.18), 0 8px 40px rgba(0,201,228,0.45); }
 
 .creator-avatar img {
   width: 100%;
@@ -819,6 +830,7 @@ input[type="range"]::-moz-range-thumb {
 .creator-card--music    .creator-role { background: linear-gradient(135deg, #2ec4b6, #06b6d4); }
 .creator-card--music2   .creator-role { background: linear-gradient(135deg, #f59e0b, #f97316); }
 .creator-card--music3   .creator-role { background: linear-gradient(135deg, #ec4899, #f472b6); }
+.creator-card--music4   .creator-role { background: linear-gradient(135deg, #00c9e4, #0ef6cc); color: #0a2a30; }
 
 .creator-bio {
   font-size: 1rem;
